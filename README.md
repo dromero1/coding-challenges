@@ -1,6 +1,6 @@
 # coding-challenges
 
-*A hybrid approach (genetic + local search) to the multidimensional demand-constrained knapsack problem*
+*Coding challenges from various sources*
 
 ## License
 
