@@ -7,5 +7,5 @@ def max_pairwise_product(numbers):
 
 if __name__ == "__main__":
     n = int(input())
-    numbers = [int(x) for x in input().split()]
+    numbers = [ int(x) for x in input().split() ]
     print(max_pairwise_product(numbers))

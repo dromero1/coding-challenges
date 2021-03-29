@@ -10,4 +10,4 @@ if __name__ == '__main__':
     s = sum(student)
     n = len(student)
     mean = s / n
-    print("{0:.2f}".format(mean))
+    print('{0:.2f}'.format(mean))
