@@ -6,7 +6,7 @@ def max_pairwise_product_slow(numbers):
     n = len(numbers)
     res = 0
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             prod = numbers[i] * numbers[j]
             if prod >= res:
                 res = prod
