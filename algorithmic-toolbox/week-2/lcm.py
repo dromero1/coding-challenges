@@ -6,6 +6,11 @@ def gcd(a, b):
     return gcd(b, a_prime)
 
 
+def lcm(a, b):
+    """ Least common multiple """
+    return int(abs(a * b) / gcd(a, b))
+
+
 if __name__ == "__main__":
     a, b = map(int, input().split())
-    print(gcd(a, b))
+    print(lcm(a, b))
