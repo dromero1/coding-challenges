@@ -25,14 +25,12 @@ def fibonacci_modulo(n, m):
     return fibonacci(rem) % m
 
 
-def last_digit_fibonacci_sum(n):
-    mod = fibonacci_modulo(n + 2, 10)
-    if mod == 0:
-        return 9
-    else:
-        return mod - 1
+def last_digit_fibonacci_partial_sum(m, n):
+    mod_n = fibonacci_modulo(n + 2, 10)
+    mod_m = fibonacci_modulo(m + 1, 10)
+    return (mod_n + 10 - mod_m) % 10
 
 
 if __name__ == "__main__":
-    n = int(input())
-    print(last_digit_fibonacci_sum(n))
+    m, n = map(int, input().split())
+    print(last_digit_fibonacci_partial_sum(m, n))
