@@ -1,3 +1,13 @@
+def fibonacci(n):
+    if n <= 1:
+        return n
+    prev = 0
+    curr = 1
+    for _ in range(n - 1):
+        prev, curr = curr, prev + curr
+    return curr
+
+
 def pisano_period(m):
     prev = 0
     curr = 1
@@ -10,20 +20,14 @@ def pisano_period(m):
     return -1
 
 
-def fibonacci(n):
-    n = n % pisano_period(10)
-    if n <= 1:
-        return n
-    prev = 0
-    curr = 1
-    for _ in range(n - 1):
-        prev, curr = curr, prev + curr
-    return curr
+def fibonacci_modulo(n, m):
+    rem = n % pisano_period(m)
+    return fibonacci(rem) % m
 
 
 def last_digit_fibonacci_sum_of_squares(n):
-    fn = fibonacci(n)
-    fp = fibonacci(n - 1)
+    fn = fibonacci_modulo(n, 10)
+    fp = fibonacci_modulo(n - 1, 10)
     return (fn * (fn + fp)) % 10
 
 
