@@ -34,6 +34,7 @@ def process_recipes(recipes):
             print('{} {:0.1f}'.format(ingredient['name'], scaled_weight))
         print(40 * '-')
 
+
 if __name__ == '__main__':
     recipes = parse_input()
     process_recipes(recipes)
